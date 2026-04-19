@@ -1,1 +1,250 @@
-# about
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resident Frequency</title>
+
+  <!-- Pico.css — classless CSS framework, dark theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.slate.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── Color & type overrides on top of Pico ── */
+    :root {
+      --pico-background-color: #0C0C0B;
+      --pico-color: #F0EDE6;
+      --pico-muted-color: #7A7770;
+      --accent: #C8F060;
+      --pico-border-color: rgba(240, 237, 230, 0.12);
+      --pico-font-family: 'Barlow', sans-serif;
+      --pico-font-weight: 300;
+      --pico-line-height: 1.75;
+    }
+
+    /* ── Site header / hero ── */
+    header {
+      padding-top: 80px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--pico-border-color);
+      margin-bottom: 64px;
+    }
+
+    /* Location tag above the title */
+    header p.eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    /* Big display title */
+    header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(72px, 14vw, 160px);
+      line-height: 0.9;
+      letter-spacing: 0.02em;
+      margin-bottom: 28px;
+      color: var(--pico-color);
+    }
+
+    /* Outline second line of the title */
+    header h1 span {
+      color: transparent;
+      -webkit-text-stroke: 1.5px var(--pico-color);
+    }
+
+    /* Tagline under the title */
+    header p.tagline {
+      font-size: 16px;
+      color: var(--pico-muted-color);
+      max-width: 480px;
+      margin-bottom: 0;
+    }
+
+    /* ── Video section ── */
+    section {
+      margin-bottom: 64px;
+    }
+
+    /* Section label */
+    section h2 {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border-bottom: 1px solid var(--pico-border-color);
+      padding-bottom: 12px;
+      margin-bottom: 20px;
+      font-family: 'Barlow', sans-serif;
+      font-weight: 400;
+    }
+
+    /* Responsive video grid — 2 columns on desktop, 1 on mobile */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2px;
+    }
+
+    /* Responsive 16:9 iframe wrapper */
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      background: #161614;
+      overflow: hidden;
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Caption under each video — edit in the HTML below, or delete the <p> */
+    .video-caption {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pico-muted-color);
+      margin-top: 8px;
+      margin-bottom: 24px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--pico-border-color);
+      padding-top: 32px;
+      padding-bottom: 48px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pico-muted-color);
+    }
+
+    footer a {
+      color: var(--pico-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--accent);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Pico uses <main class="container"> as the centered content wrapper -->
+  <main class="container">
+
+    <!-- ════════════════════════
+         HEADER / HERO
+         Edit the eyebrow, title, and tagline here.
+    ════════════════════════ -->
+    <header>
+
+      <!-- Small label above the title — location, descriptor, etc. -->
+      <p class="eyebrow">Seattle, WA</p>
+
+      <!-- Main display title.
+           The <span> gets the outline/ghost treatment.
+           You can remove the <span> to make both lines solid. -->
+      <h1>Resident<br><span>Frequency</span></h1>
+
+      <!-- One-line tagline. Keep it short. -->
+      <p class="tagline">Soundscapes from the Pacific Northwest.</p>
+
+    </header>
+
+
+    <!-- ════════════════════════
+         VIDEOS
+         To swap a video: replace the ID at the end of the YouTube embed URL.
+         e.g. https://www.youtube.com/embed/YOUR_VIDEO_ID
+         To add a video: copy one of the <div> blocks below and paste it inside .video-grid.
+         To remove a video: delete the whole <div> block.
+    ════════════════════════ -->
+    <section>
+
+      <h2>Work</h2>
+
+      <div class="video-grid">
+
+        <!-- Video 1 -->
+        <div>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/m0wESXzc47g"
+              title="Resident Frequency — video 1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <!-- Caption: edit or delete this line -->
+          <p class="video-caption">✎ Title · Year</p>
+        </div>
+
+        <!-- Video 2 -->
+        <div>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/9pOijGzUAq4"
+              title="Resident Frequency — video 2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="video-caption">✎ Title · Year</p>
+        </div>
+
+        <!-- Video 3 -->
+        <div>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/Lk-BeykWTjA"
+              title="Resident Frequency — video 3"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="video-caption">✎ Title · Year</p>
+        </div>
+
+      </div><!-- /video-grid -->
+
+    </section>
+
+
+    <!-- ════════════════════════
+         FOOTER
+         Edit contact email and social links here.
+    ════════════════════════ -->
+    <footer>
+      <span>Resident Frequency · Seattle</span>
+      <span>
+        <a href="mailto:hello@residentfrequency.com">hello@residentfrequency.com</a>
+        &nbsp;·&nbsp;
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </span>
+    </footer>
+
+  </main>
+
+</body>
+</html>
