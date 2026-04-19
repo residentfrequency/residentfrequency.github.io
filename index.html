@@ -24,13 +24,14 @@
       --pico-font-family: 'Barlow', sans-serif;
       --pico-font-weight: 300;
       --pico-line-height: 1.75;
+      --pico-font-size: 18px;
     }
 
     /* ── Site header / hero ── */
     header {
       padding-top: 80px;
       padding-bottom: 48px;
-      border-bottom: 1px solid var(--pico-border-color);
+      /* border-bottom: 1px solid var(--pico-border-color); */
       margin-bottom: 64px;
     }
 
@@ -61,7 +62,7 @@
 
     /* Tagline under the title */
     header p.tagline {
-      font-size: 16px;
+      font-size: 18px;
       color: var(--pico-muted-color);
       max-width: 480px;
       margin-bottom: 0;
@@ -89,7 +90,7 @@
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, 1fr);
-      gap: 2px;
+      gap: 2em;
     }
 
     /* Responsive 16:9 iframe wrapper */
@@ -117,6 +118,7 @@
       color: var(--pico-muted-color);
       margin-top: 8px;
       margin-bottom: 24px;
+      display: none; /* Hide captions by default; change to 'block' to show them */
     }
 
     /* ── Footer ── */
@@ -127,7 +129,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      justify-content: space-between;
+      justify-content: center;
       align-items: baseline;
       font-size: 12px;
       letter-spacing: 0.08em;
@@ -156,8 +158,6 @@
     ════════════════════════ -->
     <header>
 
-      <!-- Small label above the title — location, descriptor, etc. -->
-      <p class="eyebrow">Seattle, WA</p>
 
       <!-- Main display title.
            The <span> gets the outline/ghost treatment.
@@ -165,9 +165,27 @@
       <h1>Resident<br><span>Frequency</span></h1>
 
       <!-- One-line tagline. Keep it short. -->
-      <p class="tagline">Soundscapes from the Pacific Northwest.</p>
+      <p class="tagline">Immersive media collective from the Pacific Northwest.</p>
 
     </header>
+
+    <!-- ════════════════════════
+         Installations
+    ════════════════════════ -->
+    <section>
+        <h2>Installations</h2>
+    
+        <div>    
+            <p><strong>Electric Sea, Mar 2026</strong><br />
+            Collaborative synthesis of spatial audio, generative music, and new media art in an immersive popup / performance</p>
+        </div>
+    
+        <div>    
+            <p><strong>Podquadgeddon, Sep 2025</strong><br />
+            Sound art installation mixing ocean recordings from the Salish Sea with generated textures in an evolving modular system</p>
+        </div>
+
+    </section>
 
 
     <!-- ════════════════════════
@@ -179,7 +197,7 @@
     ════════════════════════ -->
     <section>
 
-      <h2>Work</h2>
+      <h2>Videos</h2>
 
       <div class="video-grid">
 
@@ -236,11 +254,8 @@
          Edit contact email and social links here.
     ════════════════════════ -->
     <footer>
-      <span>Resident Frequency · Seattle</span>
       <span>
-        <a href="mailto:hello@residentfrequency.com">hello@residentfrequency.com</a>
-        &nbsp;·&nbsp;
-        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://github.com/residentfrequency" target="_blank" rel="noopener">Visit us on GitHub</a>
       </span>
     </footer>
 
